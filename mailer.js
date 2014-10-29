@@ -19,7 +19,7 @@ var program = require('commander')
 program.on('--help', function(){
     console.log("  Example:");
     console.log("");
-    console.log("    $ custom-help --help");
+    console.log("    $ node mailer.js --user \"itbrandonsilva@gmail.com\" --key \"GGn_xW_tdDKiYthSFdCMw\" --host \"smtp.mandrillapp.com\" --port 587 --template \"theemail.html\" --subject \"Wasup\" --recipients \"recipients.csv\" --from \"yaboi@wazgood.com\"");
     console.log("");
     console.log("  Alternative text email is not supported.");
     console.log("");
