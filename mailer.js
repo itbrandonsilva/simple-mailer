@@ -21,7 +21,7 @@ program.on('--help', function(){
     console.log("");
     console.log("    $ custom-help --help");
     console.log("");
-    console.log("  Alternative text email is unsupported.");
+    console.log("  Alternative text email is  not supported.");
     console.log("");
 });
 
