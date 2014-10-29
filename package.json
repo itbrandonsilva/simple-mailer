@@ -1,0 +1,11 @@
+{
+  "description": "Blasts emails.",
+  "repository": "https://www.github.com/itbrandonsilva/simple-mailer.git",
+  "dependencies": {
+    "async": "^0.9.0",
+    "commander": "^2.5.0",
+    "csv-parse": "0.0.6",
+    "nodemailer": "^1.3.0",
+    "nodemailer-smtp-transport": "^0.1.13"
+  }
+}
