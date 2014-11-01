@@ -1,3 +1,5 @@
+#!/usr/local/bin/node
+
 var nodemailer = require('nodemailer');
 var smtpTransport = require('nodemailer-smtp-transport');
 var csvparser = require('csv-parse');
@@ -13,13 +15,15 @@ var program = require('commander')
     .option('-t, --template [path]', 'Path to email template/html.')
     .option('-s, --subject [subject]', 'Email subject.')
     .option('-r, --recipients [path]', 'Path to csv file with one column of recipients.')
-    .option('-d, --delay', '(Optional) Time to wait in between sending emails in milliseconds.')
+    .option('-d, --delay [ms]', '(Optional) Time to wait in between sending emails in milliseconds.')
     .option('-f, --from [email]', '(Optional) Override -u argument and specify your own \'from\' parameter.');
 
 program.on('--help', function(){
     console.log("  Example:");
     console.log("");
-    console.log("    $ node mailer.js --user \"itbrandonsilva@gmail.com\" --key \"GGn_xW_tdDKiYthSFdCMw\" --host \"smtp.mandrillapp.com\" --port 587 --template \"theemail.html\" --subject \"Wasup\" --recipients \"recipients.csv\" --from \"yaboi@wazgood.com\"");
+    console.log("    $ node mailer.js --user \"itbrandonsilva@gmail.com\" --key \"GGn_xW_tdDKiYthSFdCMw\"");
+    console.log("    --host \"smtp.mandrillapp.com\" --port 587 --template \"theemail.html\" --subject \"Wasup\"");
+    console.log("    --recipients \"recipients.csv\" --from \"yaboi@wazgood.com\" --delay 10000");
     console.log("");
     console.log("  Alternative text email is not supported.");
     console.log("");
